@@ -1,0 +1,8 @@
+@import "./globals.scss";
+
+
+.container {
+    height: 100vh;
+    @include flex-center;
+    flex-direction: column;
+}

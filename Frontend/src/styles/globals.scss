@@ -1,0 +1,140 @@
+
+// ? Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+// ? Color Palette
+
+$white-main: #ffffff;
+$white-faded: #f4f3f3;
+$dark-main: #242529;
+$dark-faded: #37373f;
+$gray-light-theme: #7b8091;
+$gray-dark-theme: #686b72;
+$black: #0d0e12;
+
+.light-theme {
+    .primary-background-theme {
+        background-color: $white-faded;
+    }
+
+    .secondary-background-theme {
+        background-color: $white-main;
+    }
+
+    .primary-text-theme {
+        color: $dark-main;
+    }
+
+    .secondary-text-theme {
+        color: $dark-faded;
+    }
+
+    .gray-text-theme {
+        color: $gray-light-theme;
+    }
+}
+
+.dark-theme {
+    .primary-background-theme {
+        background-color: $dark-main;
+    }
+
+    .secondary-background-theme {
+        background-color: $dark-faded;
+    }
+
+    .primary-text-theme {
+        color: $white-main;
+    }
+
+    .secondary-text-theme {
+        color: $white-faded;
+    }
+
+    .gray-text-theme {
+        color: $gray-dark-theme;
+    }
+}
+
+
+
+// ? Default Styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+// ? Misc & Other
+
+$border-rad-xs: 0.5rem;
+$border-rad-sm: 1rem;
+$border-rad-md: 1.5rem;
+$border-rad-lg: 2rem;
+$border-rad-xl: 3rem;
+$border-rad-2xl: 4rem;
+
+
+
+// ? Mixins
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+// ? Dividers & Containers
+
+
+
+// ? Text Content
+
+.title-main {
+    font-size: 3.5rem;
+    font-weight: 600;
+
+    @media(max-width: 670px) {
+        font-size: 2.2rem;
+    }
+}
+
+.title-second {
+    font-size: 2rem;
+    font-weight: 500;
+
+    @media(max-width: 670px) {
+        font-size: 1.8rem;
+    }
+}

@@ -17,8 +17,5 @@ export const useThemeSwitcher = (theme) => {
 
     useEffect(() => {
         localStorage.setItem("theme", theme);
-        theme === "dark" ?
-            document.documentElement.classList.add("dark") :
-            document.documentElement.classList.remove("dark");
     }, [theme]);
 }
