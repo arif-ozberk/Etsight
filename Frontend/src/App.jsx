@@ -9,6 +9,9 @@ import { router } from './Routes/routes';
 // Hooks
 import { useThemeInitialize, useThemeSwitcher } from './hooks/themeSwitch';
 
+// Context
+import { mainContext } from './context/mainContext';
+
 
 function App() {
 	const [theme, setTheme] = useState("light");
@@ -24,10 +27,9 @@ function App() {
 
 
 	return (
-		<>
-			<button className='bg-blue-300 px-5 py-2 text-xl rounded-full' onClick={handleThemeSwtichButton}>switch</button>
+		<mainContext.Provider value={{handleThemeSwtichButton}}>
 			<RouterProvider router={router} />
-		</>
+		</mainContext.Provider>
 	);
 }
 
