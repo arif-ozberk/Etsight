@@ -27,7 +27,23 @@ export default {
 		},
 		extend: {
 			colors: {
-
+				"dark": {
+					"main": "#242529",
+					"faded": "#37373f"
+				},
+				"white": {
+					"main": "#ffffff",
+					"faded": "#dbdbdb",
+					"smoke": "#f4f3f3"
+				},
+				"black": "#050406",
+				"dimgray": "#676a71",
+				"orange": {
+					"main": "#f56400"
+				},
+				"purple": {
+					"main": "#a6abff"
+				}
 			}
 		},
 	},
