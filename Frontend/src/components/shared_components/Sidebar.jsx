@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom';
+
+// Styles
+import styles from "../../styles/shared_components/Sidebar.module.scss";
+
+// Context
+import { mainContext } from '../../context/mainContext';
 
 
 const Sidebar = () => {
+
+	const { isSidebarOpen, setSidebarIsOpen } = useContext(mainContext);
+
+
 	return (
-		<div>
-			<Link to="/">Home</Link>
-			<Link to="/about">About</Link>
-			<Link to="/profile">Profile</Link>
+		<>
+			<div>
+				Sidebar
+			</div>
 
 			<Outlet />
-		</div>
+		</>
+		
 	);
 }
 

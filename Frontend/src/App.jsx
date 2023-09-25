@@ -15,6 +15,7 @@ import { mainContext } from './context/mainContext';
 
 function App() {
 	const [theme, setTheme] = useState("light");
+	const [isSidebarOpen, setSidebarIsOpen] = useState(true);
 
 	// Theme Switcher Hooks
 	useThemeInitialize(theme, setTheme);
@@ -27,7 +28,7 @@ function App() {
 
 
 	return (
-		<mainContext.Provider value={{handleThemeSwtichButton}}>
+		<mainContext.Provider value={{handleThemeSwtichButton, theme, isSidebarOpen, setSidebarIsOpen}}>
 			<RouterProvider router={router} />
 		</mainContext.Provider>
 	);
